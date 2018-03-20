@@ -1,0 +1,576 @@
+
+newmtl mat_Taxi_01
+Ka  0.6 0.6 0.6
+Kd  1 1 1
+Ks  0.0 0.0 0.0
+d  1.0
+Ns  96.0
+Ni  1.0
+illum 1
+map_Kd tex_Taxi_01.png
+
+
+
+newmtl adPlane
+Ka  0.6 0.6 0.6
+Kd  1 1 1
+Ks  0.0 0.0 0.0
+d  1.0
+Ns  96.0
+Ni  1.0
+illum 1
+map_Kd default.png
+
+
+
+newmtl ast4 lw
+Ka  0.6 0.6 0.6
+Kd  1 1 1
+Ks  0.0 0.0 0.0
+d  1.0
+Ns  96.0
+Ni  1.0
+illum 1
+map_Kd ast3.png
+
+
+
+newmtl bark wh lw
+Ka  0.6 0.6 0.6
+Kd  1 1 1
+Ks  0.0 0.0 0.0
+d  1.0
+Ns  96.0
+Ni  1.0
+illum 1
+map_Kd bark_wh.png
+
+
+
+newmtl BigImage
+Ka  0.6 0.6 0.6
+Kd  1 1 1
+Ks  0.0 0.0 0.0
+d  1.0
+Ns  96.0
+Ni  1.0
+illum 1
+
+
+
+
+newmtl mat_Hatchback
+Ka  0.6 0.6 0.6
+Kd  1 1 1
+Ks  0.0 0.0 0.0
+d  1.0
+Ns  96.0
+Ni  1.0
+illum 1
+map_Kd tex_Hatchback_01.png
+
+
+
+newmtl Tex_0005_1
+Ka  0.6 0.6 0.6
+Kd  0.588 0.588 0.588
+Ks  0.0 0.0 0.0
+d  1.0
+Ns  96.0
+Ni  1.0
+illum 1
+
+
+
+
+newmtl Tex_0004_1
+Ka  0.6 0.6 0.6
+Kd  1 1 1
+Ks  0.0 0.0 0.0
+d  1.0
+Ns  96.0
+Ni  1.0
+illum 1
+map_Kd Tex_0004_1.png
+
+
+
+newmtl ProgressBar
+Ka  0.6 0.6 0.6
+Kd  1 1 1
+Ks  0.0 0.0 0.0
+d  1.0
+Ns  96.0
+Ni  1.0
+illum 1
+map_Kd img1.png
+
+
+
+newmtl Curb
+Ka  0.6 0.6 0.6
+Kd  1 1 1
+Ks  0.0 0.0 0.0
+d  1.0
+Ns  96.0
+Ni  1.0
+illum 1
+map_Kd Curb.png
+
+
+
+newmtl Main_Road
+Ka  0.6 0.6 0.6
+Kd  1 1 1
+Ks  0.0 0.0 0.0
+d  1.0
+Ns  96.0
+Ni  1.0
+illum 1
+map_Kd Main_Road.png
+
+
+
+newmtl Concrete_Pad
+Ka  0.6 0.6 0.6
+Kd  1 1 1
+Ks  0.0 0.0 0.0
+d  1.0
+Ns  96.0
+Ni  1.0
+illum 1
+map_Kd Concrete_Pad.png
+
+
+
+newmtl No Name
+Ka  0.6 0.6 0.6
+Kd  0.8 0.8 0.8
+Ks  0.0 0.0 0.0
+d  1.0
+Ns  96.0
+Ni  1.0
+illum 1
+map_Kd CSS_Arms_Texture.png
+
+
+
+newmtl Buildings_MAIN_2
+Ka  0.6 0.6 0.6
+Kd  1 1 1
+Ks  0.0 0.0 0.0
+d  1.0
+Ns  96.0
+Ni  1.0
+illum 1
+map_Kd Buildings_MAIN_2.png
+
+
+
+newmtl Building_Roof_MAIN
+Ka  0.6 0.6 0.6
+Kd  1 1 1
+Ks  0.0 0.0 0.0
+d  1.0
+Ns  96.0
+Ni  1.0
+illum 1
+map_Kd Building_Roof_MAIN.png
+
+
+
+newmtl F1bMat
+Ka  0.6 0.6 0.6
+Kd  0.8 0.8 0.8
+Ks  0.0 0.0 0.0
+d  1.0
+Ns  96.0
+Ni  1.0
+illum 1
+map_Kd CSS_Arms_Texture.png
+
+
+
+newmtl GrassHillAlbedo
+Ka  0.6 0.6 0.6
+Kd  1 1 1
+Ks  0.0 0.0 0.0
+d  1.0
+Ns  96.0
+Ni  1.0
+illum 1
+map_Kd GrassHillAlbedo.png
+
+
+
+newmtl F4bMat
+Ka  0.6 0.6 0.6
+Kd  0.8 0.8 0.8
+Ks  0.0 0.0 0.0
+d  1.0
+Ns  96.0
+Ni  1.0
+illum 1
+map_Kd CSS_Arms_Texture.png
+
+
+
+newmtl Buildings_MAIN_1
+Ka  0.6 0.6 0.6
+Kd  1 1 1
+Ks  0.0 0.0 0.0
+d  1.0
+Ns  96.0
+Ni  1.0
+illum 1
+map_Kd Buildings_MAIN_1.png
+
+
+
+newmtl F5aMat
+Ka  0.6 0.6 0.6
+Kd  0.8 0.8 0.8
+Ks  0.0 0.0 0.0
+d  1.0
+Ns  96.0
+Ni  1.0
+illum 1
+map_Kd CSS_Arms_Texture.png
+
+
+
+newmtl 1)Mat
+Ka  0.6 0.6 0.6
+Kd  1 1 1
+Ks  0.0 0.0 0.0
+d  1.0
+Ns  96.0
+Ni  1.0
+illum 1
+map_Kd CSS_Arms_Texture.png
+
+
+
+newmtl F2aMat
+Ka  0.6 0.6 0.6
+Kd  0.8 0.8 0.8
+Ks  0.0 0.0 0.0
+d  1.0
+Ns  96.0
+Ni  1.0
+illum 1
+map_Kd CSS_Arms_Texture.png
+
+
+
+newmtl Tex_0009_1.dds
+Ka  0.6 0.6 0.6
+Kd  1 1 1
+Ks  0.0 0.0 0.0
+d  1.0
+Ns  96.0
+Ni  1.0
+illum 1
+map_Kd Tex_0010_1.png
+
+
+
+newmtl healthBackground
+Ka  0.6 0.6 0.6
+Kd  0.1397059 0.1191609 0.1191609
+Ks  0.0 0.0 0.0
+d  1.0
+Ns  96.0
+Ni  1.0
+illum 1
+
+
+
+
+newmtl Main_Intersections
+Ka  0.6 0.6 0.6
+Kd  1 1 1
+Ks  0.0 0.0 0.0
+d  1.0
+Ns  96.0
+Ni  1.0
+illum 1
+map_Kd Main_Intersections.png
+
+
+
+newmtl 10)Mat
+Ka  0.6 0.6 0.6
+Kd  0.8 0.8 0.8
+Ks  0.0 0.0 0.0
+d  1.0
+Ns  96.0
+Ni  1.0
+illum 1
+map_Kd CSS_Arms_Texture.png
+
+
+
+newmtl Tex_0009_1.dd1
+Ka  0.6 0.6 0.6
+Kd  0.5843138 0.5843138 0.5843138
+Ks  0.0 0.0 0.0
+d  1.0
+Ns  96.0
+Ni  1.0
+illum 1
+map_Kd Tex_0009_1.png
+
+
+
+newmtl 3)Mat
+Ka  0.6 0.6 0.6
+Kd  0.8 0.8 0.8
+Ks  0.0 0.0 0.0
+d  1.0
+Ns  96.0
+Ni  1.0
+illum 1
+map_Kd CSS_Arms_Texture.png
+
+
+
+newmtl F2bMat
+Ka  0.6 0.6 0.6
+Kd  0.8 0.8 0.8
+Ks  0.0 0.0 0.0
+d  1.0
+Ns  96.0
+Ni  1.0
+illum 1
+map_Kd CSS_Arms_Texture.png
+
+
+
+newmtl UAMat
+Ka  0.6 0.6 0.6
+Kd  0.8 0.8 0.8
+Ks  0.0 0.0 0.0
+d  1.0
+Ns  96.0
+Ni  1.0
+illum 1
+map_Kd CSS_Arms_Texture.png
+
+
+
+newmtl F4cMat
+Ka  0.6 0.6 0.6
+Kd  0.8 0.8 0.8
+Ks  0.0 0.0 0.0
+d  1.0
+Ns  96.0
+Ni  1.0
+illum 1
+
+
+
+
+newmtl F3cMat
+Ka  0.6 0.6 0.6
+Kd  0.8 0.8 0.8
+Ks  0.0 0.0 0.0
+d  1.0
+Ns  96.0
+Ni  1.0
+illum 1
+map_Kd CSS_Arms_Texture.png
+
+
+
+newmtl health
+Ka  0.6 0.6 0.6
+Kd  0 1 0
+Ks  0.0 0.0 0.0
+d  1.0
+Ns  96.0
+Ni  1.0
+illum 1
+
+
+
+
+newmtl 11)Mat
+Ka  0.6 0.6 0.6
+Kd  0.8 0.8 0.8
+Ks  0.0 0.0 0.0
+d  1.0
+Ns  96.0
+Ni  1.0
+illum 1
+map_Kd CSS_Arms_Texture.png
+
+
+
+newmtl H2Mat
+Ka  0.6 0.6 0.6
+Kd  0.8 0.8 0.8
+Ks  0.0 0.0 0.0
+d  1.0
+Ns  96.0
+Ni  1.0
+illum 1
+map_Kd CSS_Arms_Texture.png
+
+
+
+newmtl 2)Mat
+Ka  0.6 0.6 0.6
+Kd  1 1 1
+Ks  0.0 0.0 0.0
+d  1.0
+Ns  96.0
+Ni  1.0
+illum 1
+map_Kd CSS_Arms_Texture.png
+
+
+
+newmtl F2cMat
+Ka  0.6 0.6 0.6
+Kd  0.8 0.8 0.8
+Ks  0.0 0.0 0.0
+d  1.0
+Ns  96.0
+Ni  1.0
+illum 1
+map_Kd CSS_Arms_Texture.png
+
+
+
+newmtl F5bMat
+Ka  0.6 0.6 0.6
+Kd  0.8 0.8 0.8
+Ks  0.0 0.0 0.0
+d  1.0
+Ns  96.0
+Ni  1.0
+illum 1
+map_Kd CSS_Arms_Texture.png
+
+
+
+newmtl F4aMat
+Ka  0.6 0.6 0.6
+Kd  0.8 0.8 0.8
+Ks  0.0 0.0 0.0
+d  1.0
+Ns  96.0
+Ni  1.0
+illum 1
+map_Kd CSS_Arms_Texture.png
+
+
+
+newmtl F1aMat
+Ka  0.6 0.6 0.6
+Kd  0.8 0.8 0.8
+Ks  0.0 0.0 0.0
+d  1.0
+Ns  96.0
+Ni  1.0
+illum 1
+map_Kd CSS_Arms_Texture.png
+
+
+
+newmtl 13)Mat
+Ka  0.6 0.6 0.6
+Kd  0.8 0.8 0.8
+Ks  0.0 0.0 0.0
+d  1.0
+Ns  96.0
+Ni  1.0
+illum 1
+map_Kd CSS_Arms_Texture.png
+
+
+
+newmtl 12)Mat
+Ka  0.6 0.6 0.6
+Kd  0.8 0.8 0.8
+Ks  0.0 0.0 0.0
+d  1.0
+Ns  96.0
+Ni  1.0
+illum 1
+map_Kd CSS_Arms_Texture.png
+
+
+
+newmtl F3aMat
+Ka  0.6 0.6 0.6
+Kd  0.8 0.8 0.8
+Ks  0.0 0.0 0.0
+d  1.0
+Ns  96.0
+Ni  1.0
+illum 1
+map_Kd CSS_Arms_Texture.png
+
+
+
+newmtl F3bMat
+Ka  0.6 0.6 0.6
+Kd  0.8 0.8 0.8
+Ks  0.0 0.0 0.0
+d  1.0
+Ns  96.0
+Ni  1.0
+illum 1
+map_Kd CSS_Arms_Texture.png
+
+
+
+newmtl 14)Mat
+Ka  0.6 0.6 0.6
+Kd  0.8 0.8 0.8
+Ks  0.0 0.0 0.0
+d  1.0
+Ns  96.0
+Ni  1.0
+illum 1
+map_Kd CSS_Arms_Texture.png
+
+
+
+newmtl Player
+Ka  0.6 0.6 0.6
+Kd  1 1 1
+Ks  0.0 0.0 0.0
+d  1.0
+Ns  96.0
+Ni  1.0
+illum 1
+
+
+
+
+newmtl H1Mat
+Ka  0.6 0.6 0.6
+Kd  0.8 0.8 0.8
+Ks  0.0 0.0 0.0
+d  1.0
+Ns  96.0
+Ni  1.0
+illum 1
+map_Kd CSS_Arms_Texture.png
+
+
+
+newmtl F5cMat
+Ka  0.6 0.6 0.6
+Kd  0.8 0.8 0.8
+Ks  0.0 0.0 0.0
+d  1.0
+Ns  96.0
+Ni  1.0
+illum 1
+map_Kd CSS_Arms_Texture.png
+
+
