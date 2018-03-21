@@ -23,12 +23,13 @@
 		<script src="MTLLoader.js"></script>
 		<script src="OBJLoader.js"></script>
 		<script src="OrbitControls.js"></script>
+		<script src="./movement.js"></script>
 		<script>
 
-			var camera, controls, scene, model, renderer;
+			var camera, controls, scene, model, renderer, cameraHolder;;
 
 			init();
-			animate();
+			// animate();
 
 
 			function init() {
@@ -38,13 +39,17 @@
 
 				camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 4000 );
 				// camera.position.x = 200;
-				// camera.position.y = 1;
+				camera.position.y = 0;
 				// camera.position.z = -1048;
+				cameraHolder = new THREE.Object3D();
+				setMovementCamera(camera);
+				setMovementObject(cameraHolder);
+				cameraHolder.add(camera);
 
 				// scene
-
 				scene = new THREE.Scene();
-
+				scene.add(cameraHolder);
+				
 				var ambient = new THREE.AmbientLight( 0xbbbbbb );
 				scene.add( ambient );
 
@@ -78,10 +83,10 @@
 					objLoader.setPath( 'test_1/' );
 					objLoader.load( 'test_1.obj', function ( object ) {
 
+						model = object;
 						model.position.x += -200;
 						model.position.y += -1;
 						model.position.z += 1048;
-						model = object;
 						scene.add(object);
 
 					}, onProgress, onError );
@@ -92,7 +97,7 @@
 				renderer.setPixelRatio( window.devicePixelRatio );
 				renderer.setSize( window.innerWidth, window.innerHeight );
 				renderer.vr.enabled = true;
-				renderer.vr.userHeight = 0; // TOFIX
+				renderer.vr.userHeight = 1; // TOFIX
 				document.body.appendChild( renderer.domElement );
 
 				document.body.appendChild( WEBVR.createButton( renderer ) );
@@ -105,7 +110,7 @@
 				// controls.enableZoom = true;
 				// controls.enableKeys = false;
 				// controls.autoRotateSpeed = 1;
-				// controls.target.set(92, 0, -918);
+				// controls.target.set(1, 1, 1);
 
 				// controls.addEventListener('change', function() {
 
@@ -125,20 +130,23 @@
 
 			}
 
-			function animate() {
+			// function animate() {
 
-				requestAnimationFrame( animate );
-				render();
+			// 	requestAnimationFrame( animate );
+			// 	render();
 
-			}
+			// }
 
 			function render() {
 
+				moveCamera();
 				// controls.update();
 				
 				renderer.render( scene, camera );
 
 			}
+
+			renderer.animate(render);
 
 		</script>
 
