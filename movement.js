@@ -2,14 +2,15 @@
 const velocity = 2.5;
 
 // init variables
-let movementCamera = null;
-let movementObject = null;
+let _movementCamera = null;
+let _movementObject = null;
+let _shouldMove = false;
 
 // operation variables
-movementCameraDirection = new THREE.Vector3();
+let _movementCameraDirection = new THREE.Vector3();
 let lastUnix = null;
 
-const getUnix = () => {
+const _getUnix = () => {
 
     if (Date.now){
 
@@ -23,46 +24,52 @@ const getUnix = () => {
 
 }
 
-const getDelta = () => {
+const _getDelta = () => {
 
     if (lastUnix){
 
-        const delta = getUnix() - lastUnix;
+        const delta = _getUnix() - lastUnix;
         lastUnix += delta;
         return delta;
 
     }else{
 
-        lastUnix = getUnix();
+        lastUnix = _getUnix();
         return 0;
 
     }
 
 }
 
+const toggleMovement = () => {
+
+    _shouldMove = !_shouldMove;
+
+};
+
 const setMovementCamera = (newCamera) => {
 
-    movementCamera = newCamera;
+    _movementCamera = newCamera;
 
-}   
+};
 
 const setMovementObject = (newObject) => {
 
-    movementObject = newObject;
+    _movementObject = newObject;
 
-}
+};
 
 const moveCamera = () => {
 
-    if (movementCamera && movementObject){
+    if (_movementCamera && _movementObject && _shouldMove){
 
-        const timeDelta = getDelta();
-        movementCamera.getWorldDirection(movementCameraDirection);
-        movementCameraDirection.y = 0;
-        movementCameraDirection.normalize();
-        movementCameraDirection.multiplyScalar(timeDelta * velocity / 1000);
-        movementObject.position.add(movementCameraDirection);
+        const timeDelta = _getDelta();
+        _movementCamera.getWorldDirection(_movementCameraDirection);
+        _movementCameraDirection.y = 0;
+        _movementCameraDirection.normalize();
+        _movementCameraDirection.multiplyScalar(timeDelta * velocity / 1000);
+        _movementObject.position.add(_movementCameraDirection);
 
     }
 
-}
+};

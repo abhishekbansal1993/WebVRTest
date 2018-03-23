@@ -24,6 +24,7 @@
 		<script src="OBJLoader.js"></script>
 		<script src="OrbitControls.js"></script>
 		<script src="./movement.js"></script>
+		<script src="./VadrThreeJs/build/vadr-three.js"></script>
 		<script>
 
 			var camera, controls, scene, model, renderer, cameraHolder;;
@@ -45,6 +46,9 @@
 				setMovementCamera(camera);
 				setMovementObject(cameraHolder);
 				cameraHolder.add(camera);
+				cameraHolder.position.x += 200;
+				cameraHolder.position.y += 1;
+				cameraHolder.position.z += -1048;
 
 				// scene
 				scene = new THREE.Scene();
@@ -84,10 +88,8 @@
 					objLoader.load( 'test_1.obj', function ( object ) {
 
 						model = object;
-						model.position.x += -200;
-						model.position.y += -1;
-						model.position.z += 1048;
 						scene.add(object);
+						initAnalytics();
 
 					}, onProgress, onError );
 
@@ -104,20 +106,21 @@
 
 				container.appendChild( renderer.domElement );
 
-				// controls = new THREE.OrbitControls(camera, renderer.domElement);
-				// controls.enableDamping = false;
-				// controls.dampingFactor = 0.25;
-				// controls.enableZoom = true;
-				// controls.enableKeys = false;
-				// controls.autoRotateSpeed = 1;
-				// controls.target.set(1, 1, 1);
+				controls = new THREE.OrbitControls(camera, renderer.domElement);
+				controls.enableDamping = false;
+				controls.dampingFactor = 0.25;
+				controls.enableZoom = true;
+				controls.enableKeys = false;
+				controls.autoRotateSpeed = 1;
+				controls.target.set(1, 1, 1);
 
-				// controls.addEventListener('change', function() {
+				controls.addEventListener('change', function() {
 
 
-				// });
+				});
 
 				window.addEventListener( 'resize', onWindowResize, false );
+				window.addEventListener( 'click', toggleMovement);
 
 			}
 
@@ -130,18 +133,22 @@
 
 			}
 
-			// function animate() {
+			function initAnalytics(){
 
-			// 	requestAnimationFrame( animate );
-			// 	render();
+				const appDetails = {
+					appId: '46',
+					appToken: 'fe2638be-1b2a-4b64-8ec9-411bda0b8438',
+					sceneId: '90'
+				};
+				VADR.init(appDetails, camera, scene);
 
-			// }
+			}
 
 			function render() {
 
 				moveCamera();
-				// controls.update();
-				
+				controls.update();
+				VADR.tick();
 				renderer.render( scene, camera );
 
 			}
