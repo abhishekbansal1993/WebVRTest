@@ -28,7 +28,7 @@
 		<script>
 
 			var camera, controls, scene, model, renderer, cameraHolder;;
-
+			var appId, sceneId;
 			init();
 			// animate();
 
@@ -46,9 +46,9 @@
 				setMovementCamera(camera);
 				setMovementObject(cameraHolder);
 				cameraHolder.add(camera);
-				cameraHolder.position.x += 200;
+				cameraHolder.position.x += 100;
 				cameraHolder.position.y += 1;
-				cameraHolder.position.z += -1048;
+				cameraHolder.position.z += -1000;
 
 				// scene
 				scene = new THREE.Scene();
@@ -120,7 +120,7 @@
 				});
 
 				window.addEventListener( 'resize', onWindowResize, false );
-				window.addEventListener( 'click', toggleMovement);
+				// window.addEventListener( 'click', toggleMovement);
 
 			}
 
@@ -138,8 +138,10 @@
 				const appDetails = {
 					appId: '46',
 					appToken: 'fe2638be-1b2a-4b64-8ec9-411bda0b8438',
-					sceneId: '90'
+					sceneId: '91'
 				};
+				appId = '46';
+				sceneId = '91';
 				VADR.init(appDetails, camera, scene);
 
 			}
@@ -148,9 +150,99 @@
 
 				moveCamera();
 				controls.update();
+				handleAppSceneChange();
 				VADR.tick();
 				renderer.render( scene, camera );
 
+			}
+
+			function handleAppSceneChange(){
+
+				if (cameraHolder && model){
+
+					const appDetails = getAppId();
+					appDetails.sceneId = getSceneId(appDetails.appId);
+
+					if (appId != appDetails.appId){
+
+						changeApp(appDetails);
+						appId = appDetails.appId;
+						sceneId = appDetails.sceneId;
+
+					}else if (sceneId != appDetails.sceneId){
+
+						changeScene(appDetails.sceneId);
+						sceneId = appDetails.sceneId;
+
+					}
+				}
+			}
+
+			function changeScene(newSceneDetials){
+
+				console.log('change scene', newSceneDetials);
+				VADR.scene.addScene(newSceneDetials, null);
+
+			}
+
+			function changeApp(newAppDetials){
+
+				console.log('change app', newAppDetials);
+				VADR.destroy();
+				VADR.init(newAppDetials, camera, scene);
+
+			}
+			
+			function getAppId(){
+
+				if(cameraHolder){
+
+					const cameraX = cameraHolder.position.x;
+
+					if(cameraX > 144){
+
+						return {
+							appId: '1',
+							appToken: '05a98c93-dbb9-4260-b531-2e32eeeade9e',
+							sceneId: null
+						};
+
+					}else{
+
+						return {
+							appId: '46',
+							appToken: 'fe2638be-1b2a-4b64-8ec9-411bda0b8438',
+							sceneId: null
+						};
+
+					}
+
+				}
+
+				return null;
+
+			}
+
+			function getSceneId(appId){
+
+				if(cameraHolder){
+
+					const cameraZ = cameraHolder.position.z;
+
+					if(cameraZ > -1023){
+
+						return appId == '1' ? '93' : '91';
+
+					}else{
+
+						return appId == '1' ? '94' : '92';
+
+					}
+
+				}
+
+				return null;
+				
 			}
 
 			renderer.animate(render);

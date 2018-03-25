@@ -4,7 +4,7 @@ const velocity = 2.5;
 // init variables
 let _movementCamera = null;
 let _movementObject = null;
-let _shouldMove = false;
+let _shouldMove = true;
 
 // operation variables
 let _movementCameraDirection = new THREE.Vector3();
